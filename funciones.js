@@ -1,9 +1,9 @@
 let opcionesMapa = {
-  center:[10.2300,-67.3240],
+  center:[10.230,-67.324],
   zoom:16
 }
 
-let mapa = new L.map('mapa' , opcionesMapa);
+let mapa = new L.map('map' , opcionesMapa);
 let capa = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
 mapa.addLayer(capa);
 
