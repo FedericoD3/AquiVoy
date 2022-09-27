@@ -8,5 +8,14 @@ let objMapa = new L.map('divMapa' , opcionesMapa);
 let objCapa = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
 objMapa.addLayer(objCapa);
 
-let objMarca = new L.Marker([10.232,-67.3237]);
+let objMarca = new L.Marker([10.228,-67.3237])
+
 objMarca.addTo(objMapa);
+/*
+L.marker([10.232,-67.3237], {
+  icon: L.icon({
+    iconUrl: 'https://unpkg.com/leaflet@1.0.3/dist/images/marker-icon.png',
+    className: 'destello'
+  })
+}).addTo(map);
+*/
