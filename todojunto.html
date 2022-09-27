@@ -1,11 +1,12 @@
-
 <!DOCTYPE html>
   <html lang="es">
   <head>
 	  <title>Voy por La Victoria</title>  
 	  <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js" integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s=" crossorigin=""></script>
+    <link rel="stylesheet" href="leaflet.css" />
+<!--   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin=""/> -->
+    <script src="leaflet.js"></script>
+<!--   <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js" integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s=" crossorigin=""></script> -->
 	  <style>
 		  html, body {height: 100%; margin: 0;}
 		  .leaflet-container {
@@ -14,7 +15,7 @@
 	  		max-width: 100%;
   			max-height: 100%;
 		    }
-	  </style>
+	  </style> 
 	</head>
 
   <body>
@@ -26,6 +27,22 @@
 		    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 	      }).addTo(map);
       var marker = L.marker([10.228,-67.3237]).addTo(map);
+/*
+      var circle = L.circle([51.508, -0.11], {
+  	  	color: 'red',
+  		  fillColor: '#f03',
+		    fillOpacity: 0.5,
+		    radius: 500
+	    }).addTo(map);
+*/
+/*
+    	var polygon = L.polygon([
+    		[51.509, -0.08],
+    		[51.503, -0.06],
+    		[51.51, -0.047]
+	    ]).addTo(map);
+*/
     </script>
+
   </body>
 </html>
