@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+  <html lang="es">
+  <head>
+	  <title>Voy por La Victoria</title>  
+	  <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js" integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s=" crossorigin=""></script>
+	  <style>
+		  html, body {height: 100%; margin: 0;}
+		  .leaflet-container {
+			  height: 100%;
+			  width: 100%;
+	  		max-width: 100%;
+  			max-height: 100%;
+		    }
+	  </style>
+	</head>
+
+  <body>
+    <div id="map" style="width: 100%; height: 100%;"></div>
+    <script>
+	    var map = L.map('map').setView([10.230,-67.324], 16);
+	    var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		    maxZoom: 19,
+		    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	      }).addTo(map);
+      var marker = L.marker([10.228,-67.3237]).addTo(map);
+    </script>
+  </body>
+</html>
