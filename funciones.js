@@ -3,7 +3,7 @@ let opcionesMapa = {
   zoom:16
 }
 
-let mapa = new L.map('mapa' , opcionesMapa);
+let mapa = new L.map("mapa" , opcionesMapa);
 let capa = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
 mapa.addLayer(capa);
 
