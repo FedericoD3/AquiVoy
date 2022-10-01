@@ -1,6 +1,6 @@
 let opcionesMapa = {
   center:[10.228,-67.324],
-  zoom:16
+  zoom:15
 }
 
 let objMapa = new L.map('divMapa' , opcionesMapa);
