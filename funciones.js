@@ -1,9 +1,14 @@
 function mostrarMapa()
 {
 
+/*
 let opcionesMapa = {
-/*  center:[10.230,-67.324],
-  zoom:15 */
+  center:[10.230,-67.324],
+  zoom:15 
+}
+*/
+
+let opcionesMapa = {
   center:[10.235,-67.25],
   zoom:13
 }
