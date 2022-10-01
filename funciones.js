@@ -1,10 +1,9 @@
 function mostrarMapa()
-{
-
-let opcionesMapa = {
-  center:[10.235,-67.25],
-  zoom:13
-}
+  {
+  let opcionesMapa = {
+    center:[10.230,-67.324],
+    zoom:15 
+  }
 let objMapa = new L.map('divMapa' , opcionesMapa);
 
 let objCapa = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
@@ -15,15 +14,15 @@ objMarca.addTo(objMapa);
 
 }
 
-
 /*
-let opcionesMapa = {
+Solo LV:
   center:[10.230,-67.324],
   zoom:15 
-}
-*/
 
-/*
+Desde LV hasta LT:
+  center:[10.235,-67.25],
+  zoom:13
+
 
 setInterval(function () {AlternarMarca()}, 1000);	// Actualizar el mapa cada pocos segundos
 
