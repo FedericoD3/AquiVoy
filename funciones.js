@@ -1,13 +1,6 @@
 function mostrarMapa()
 {
 
-/*
-let opcionesMapa = {
-  center:[10.230,-67.324],
-  zoom:15 
-}
-*/
-
 let opcionesMapa = {
   center:[10.235,-67.25],
   zoom:13
@@ -21,6 +14,14 @@ let objMarca = new L.Marker([10.228,-67.323])
 objMarca.addTo(objMapa);
 
 }
+
+
+/*
+let opcionesMapa = {
+  center:[10.230,-67.324],
+  zoom:15 
+}
+*/
 
 /*
 
