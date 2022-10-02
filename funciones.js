@@ -1,9 +1,14 @@
 function mostrarMapa()
 {
-
+/*
 let opcionesMapa = {
   center:[10.230,-67.324],
   zoom:15
+}
+*/
+let opcionesMapa = {
+  center:[10.23,-67.250],
+  zoom:13
 }
 let objMapa = new L.map('divMapa' , opcionesMapa);
 
