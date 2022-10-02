@@ -18,11 +18,11 @@
 
 <!--  <body  bgcolor="#355570" onload="mostrarMapa()">  -->
   <body>
+    <div id="divMapa" style="width: 100%; height: 100%;"> </div>
     <script>
       var objMapa = L.map('divMapa').setView([10.230,-67.25], 13);
       let objCapa = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
       objMapa.addLayer(objCapa);  
     </script> 
-    <div id="divMapa" style="width: 100%; height: 100%;"> </div>
-  </body>    
+    </body>    
 </html>
