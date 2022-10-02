@@ -1,10 +1,13 @@
 function mostrarMapa()
+/*
 {
 let opcionesMapa = {
   center:[10.230,-67.324],
   zoom:15
 }
 let objMapa = new L.map('divMapa' , opcionesMapa);
+*/
+var objMapa = L.map('divMapa').setView([10.230,-67.324], 15); 
 
 let objCapa = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
 objMapa.addLayer(objCapa);
@@ -12,8 +15,7 @@ objMapa.addLayer(objCapa);
 let objMarca = new L.Marker([10.228,-67.3237])
 objMarca.addTo(objMapa);
 
-/* var objMapa = L.map('divMapa').setView([10.230,-67.324], 15); 
-
+/*
 var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 19,
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
