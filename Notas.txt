@@ -1,12 +1,7 @@
 Solo La Victoria:
-let opcionesMapa = {
-  center:[10.230,-67.324],
-  zoom:15
-
+  var objMapa = L.map('divMapa').setView([10.230,-67.324], 15);
 La Victoria hasta Tejerias
-let opcionesMapa = {
-  center:[10.23,-67.250],
-  zoom:13
+  var objMapa = L.map('divMapa').setView([10.235,-67.24], 13);
 
 setInterval(function () {ActualizarMarca()}, 1000);	// Actualizar el mapa cada pocos segundos
 
