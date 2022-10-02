@@ -7,7 +7,7 @@ function mostrarMapa()
     zoom:13
     }
   let objMapa = new L.map('divMapa' , opcionesMapa);  */
-  var objMapa = L.map('divMapa').setView([10.230,-67.25], 13);
+  var objMapa = new L.map('divMapa').setView([10.230,-67.25], 13);
 
   let objCapa = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
   objMapa.addLayer(objCapa);
