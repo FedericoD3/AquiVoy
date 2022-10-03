@@ -12,6 +12,6 @@ function mostrarMapa()
     [10.228,-67.322],
     [10.226,-67.325],
     [10.224,-67.327]
-  ]).addTo(map);
+  ]).addTo(objMapa);
 }
 
