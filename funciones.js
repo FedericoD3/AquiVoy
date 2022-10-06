@@ -1,7 +1,12 @@
+function initMapa()
+{
+  let Lat=LeerCoords()
+}
+
 function mostrarMapa()
 {
-  var objMapa = L.map('divMapa').setView([10.235,-67.24], 13);  
-/*  var objMapa = L.map('divMapa').setView([10.230,-67.324], 16);  */
+//  var objMapa = L.map('divMapa').setView([10.235,-67.24], 13);  
+  var objMapa = L.map('divMapa').setView([10.230,-67.324], 16);  
   
   var objCapa = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
       objMapa.addLayer(objCapa); 
@@ -13,7 +18,6 @@ function mostrarMapa()
   1° = 111.196m
   1m = 9µ° ≈ 0,00001°
 */
-
   var lugar_Unicentro =L.polygon([
     [10.22683, -67.33231],
     [10.22638, -67.33228],
@@ -69,7 +73,7 @@ function LeerCoords()
   dweetio.get_latest_dweet_for("Monitor_CoordFik", function(err, dweet) {
     var ubicacion = dweet[0];           // El contenido es siempre un array de un solo elemento
     return ubicacion.Lon;
-/*    console.log(ubicacion.content);     // String contenido del dweet
+/*  console.log(ubicacion.content);     // String contenido del dweet
     console.log(ubicacion.content.Lon);     // Elemento del contenido del dweet
     console.log(ubicacion.content.Lat);     // Elemento del contenido del dweet
     console.log(ubicacion.content.Vel);     // Elemento del contenido del dweet
@@ -79,10 +83,21 @@ function LeerCoords()
 
 function DestellarMarca()
 {
-  // Leer la ubicacion:  
+  /*
+  Si la latitud previa es cero,
+    
+  Salvar la latitud previa
+  Leer la ubicación
+  Si la longitud es < -67.3067 ya está cerca de La Victoria: 
+      generar el mapa de sólo La Victoria
 
-  let Latitud = LeerCoords(); 
-  console.log(Latitud);
+    en caso contrario voy por la vía:
+      generar el mapa desde La Victoria hasta Tejerías
+
+  */
+  // Leer la ubicacion:
+  var Latitud = LeerCoords(); 
+  console.log(Latitud.Lon);
 //  document.getElementById("debug").innerHTML = x;
 //  console.log x;
 }
