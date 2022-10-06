@@ -1,7 +1,7 @@
 function mostrarMapa()
 {
-/*  var objMapa = L.map('divMapa').setView([10.235,-67.24], 13);  */
-  var objMapa = L.map('divMapa').setView([10.230,-67.324], 16);  
+  var objMapa = L.map('divMapa').setView([10.235,-67.24], 13);  
+/*  var objMapa = L.map('divMapa').setView([10.230,-67.324], 16);  */
   
   var objCapa = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
       objMapa.addLayer(objCapa); 
@@ -11,7 +11,7 @@ function mostrarMapa()
 /* 
   Perimetro terrestre = 40.030.173m 
   1° = 111.196m
-  1m = 9µ° 
+  1m = 9µ° ≈ 0,00001°
 */
 
   var lugar_Unicentro =L.polygon([
@@ -64,3 +64,25 @@ function mostrarMapa()
   ], {fillOpacity: 1, weight: 1, color: '#ff0000'}).addTo(objMapa);  
 }
 
+function LeerCoords()
+{
+  dweetio.get_latest_dweet_for("Monitor_CoordFik", function(err, dweet) {
+    var ubicacion = dweet[0];           // El contenido es siempre un array de un solo elemento
+    return ubicacion.Lon;
+/*    console.log(ubicacion.content);     // String contenido del dweet
+    console.log(ubicacion.content.Lon);     // Elemento del contenido del dweet
+    console.log(ubicacion.content.Lat);     // Elemento del contenido del dweet
+    console.log(ubicacion.content.Vel);     // Elemento del contenido del dweet
+    console.log(ubicacion.content.Com);     // Elemento del contenido del dweet
+*/    });
+}
+
+function DestellarMarca()
+{
+  // Leer la ubicacion:  
+
+  let Latitud = LeerCoords(); 
+  console.log(Latitud);
+//  document.getElementById("debug").innerHTML = x;
+//  console.log x;
+}
